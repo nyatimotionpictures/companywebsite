@@ -1,0 +1,33 @@
+
+[
+        { 
+        "id": 1, 
+        "title": "Window of hope", 
+        "imageUrl": "https://ik.imagekit.io/nyatimot/films-metadata/Windows%20of%20Hope(2011)/Posters/Window_of_hope.png?updatedAt=1726827155041", 
+        "link": "/film/6653809ab30afd15ac294f78", 
+        "Trailerlink": "https://www.youtube.com/watch?v=K5X6btwsjbA"
+        },
+        { 
+        "id": 2, 
+        "title": "Fair Play", 
+        "imageUrl": "https://ik.imagekit.io/nyatimot/films-metadata/Fair%20Play(2010)/Posters/FAIR%20PLAY%20POSTER_v2.png?updatedAt=1724321468256", 
+        "link": "/film/66504774b30afd15ac294f77", 
+        "Trailerlink": "https://youtu.be/-XP0v6wolxM?si=8trBokaxeURHr1uG"
+        },
+        { 
+        "id": 3, 
+        "title": "Fate", 
+        "imageUrl": "https://ik.imagekit.io/nyatimot/films-metadata/Fate(2006)/Posters/Movie%20poster.png?updatedAt=1724325942315", 
+        "link": "/film/665383c3b30afd15ac294f79", 
+        "Trailerlink": "https://www.youtube.com/watch?v=-q_akTLvLAo&t=1s"
+        },
+        { 
+        "id": 4, 
+        "title": "Tuko Pamoja", 
+        "imageUrl": "https://ik.imagekit.io/nyatimot/films-metadata/Tuko%20Pamoja%20(2024)/Posters/main-2.png?updatedAt=1724762624919", 
+        "link": "/film/6653925ab30afd15ac294f7a", 
+        "Trailerlink": "https://www.youtube.com/watch?v=FftvaiJVKFg"
+        }
+]
+
+    

@@ -1,0 +1,269 @@
+[
+  {
+    "directory": "/website-metadata/Universal+Home",
+    "desc": "the conent stored here is for the whole website",
+    "content": [
+      {
+        "type": "Favicon",
+        "desc": "favicons",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/Favicon/Favicon%20256.svg?updatedAt=1724072202586",
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/Favicon/Favicon%2032.svg?updatedAt=1724072190044"
+        ]
+      },
+      {
+        "type": "Images",
+        "desc": "images",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/images/CTA_%20posters.png?updatedAt=1724072206597",
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/images/CTA_%20Download%20app%20image.png?updatedAt=1724072168702",
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/images/About_company.png?updatedAt=1724072148961",
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/images/Main.png?updatedAt=1724072249308",
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/images/Main_2.png?updatedAt=1727370099152",
+           "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/images/Contribute%20to%20%20Content%20Creation_image.png?updatedAt=1724268788409"
+        ]
+      },
+      {
+        "type": "Logos",
+        "desc": "SVG of logo",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/Logos/Logo1.svg?updatedAt=1724072184503",
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/Logos/Logo.png?updatedAt=1724072155473"
+        ]
+      },
+      {
+        "type": "AppButtons",
+        "desc": "images",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/App%20buttons/App%20Store.svg?updatedAt=1727370352024",
+          "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/App%20buttons/Google%20Play.svg?updatedAt=1727370351781"
+        ]
+      }
+    ]
+  },
+  {
+    "directory": "/website-metadata/Services&OngoingProduction(s)",
+    "desc": "the content is for the film page",
+    "content": [
+      {
+        "type": "Hero",
+        "desc": "images for the herosection",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Background.png?updatedAt=1727371445946"
+        ]
+      },
+      {
+        "type": "Intro",
+        "desc": "image for the intro",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Our-services-main.png?updatedAt=1724072103688"
+        ]
+      },
+      {
+        "type": "Projects",
+        "desc": "images for the projects",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Projects/service%20section-2100.png?updatedAt=1724072109558",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Projects/service%20section-Conquer%20or%20Die.png?updatedAt=1724072127006",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Projects/service%20section-States%20People.png?updatedAt=1724072121108"
+        ]
+      },
+      {
+        "type": "Images",
+        "desc": "images",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Background_2.png?updatedAt=1727373044938",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Featured%20Pre-production.png?updatedAt=1724072130309",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Our-services-main.png?updatedAt=1724072103688",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/image%209.png?updatedAt=1724072240441"
+        ]
+      },
+      {
+        "type": "Offering",
+        "desc": "images with services offered",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Offering/Consultancy.png?updatedAt=1724072129647",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Offering/Script%20Development.png?updatedAt=1724072143543",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Offering/Film%20Production.png?updatedAt=1724072132834",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Offering/Film%20Editing.png?updatedAt=1724072139530",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Offering/Sound%20Mastering.png?updatedAt=1724072140834",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Offering/Equipment%20Hire.png?updatedAt=1724072130729",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Offering/service%20section.png?updatedAt=1724072138073"
+        ]
+      },
+      {
+        "type": "Vision&Mission",
+        "desc": "image for the vision & mission",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Background_2.png?updatedAt=1727373044938"
+        ]
+      },
+      {
+        "type": "Pre-productionimage",
+        "desc": "image for the vision & mission",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/%20Services%20&%20Ongoing%20Production(s)/Featured%20Pre-production.png?updatedAt=1724072130309"
+        ]
+      }
+    ]
+  },
+  {
+    "directory:": "/website-metadata/Team",
+    "desc": "image for the team section",
+    "content": [
+      {
+        "type": "Member 1",
+        "file": "https://ik.imagekit.io/nyatimot/Pages/Teams/DSCF8275-removebg-preview%201.png?updatedAt=1724764695066"
+      },
+      {
+        "type": "Member 2",
+        "file": "https://ik.imagekit.io/nyatimot/Pages/Teams/DSCF70000-removebg-preview%201.png?updatedAt=1724072086163"
+      },
+      {
+        "type": "Member 3",
+        "file": "https://ik.imagekit.io/nyatimot/Pages/Teams/DSCF9401-removebg-preview%201.png?updatedAt=1724072086736"
+      },
+      {
+        "type": "Member 4",
+        "file": "https://ik.imagekit.io/nyatimot/Pages/Teams/DSCF80000-removebg-preview%201.png?updatedAt=1724764138432"
+      }
+    ]
+  },
+  {
+    "directory": "/website-metadata/FilmsPage",
+    "desc": "the content is for the film page",
+    "content": [
+      {
+        "type": "slider",
+        "desc": "slider images for the films page",
+        "files": [
+          {
+            "desc": "Slider-1",
+            "imgs": [
+              {
+                "type": "Web",
+                "link": "https://ik.imagekit.io/nyatimot/Pages/Films%20page/slider/Web/Web%20slider-1.png?updatedAt=1724072368974"
+              },
+              {
+                "type": "Mobile",
+                "link": "https://ik.imagekit.io/nyatimot/Pages/Films%20page/slider/Mobile/Mobile%20slider-1.png?updatedAt=1724072362842"
+              }
+            ]
+          },
+          {
+            "desc": "Slider-2",
+            "imgs": [
+              {
+                "type": "Web",
+                "link": "https://ik.imagekit.io/nyatimot/Pages/Films%20page/slider/Web/Web%20slider-2.png?updatedAt=1724072364647"
+              },
+              {
+                "type": "Mobile",
+                "link": "https://ik.imagekit.io/nyatimot/Pages/Films%20page/slider/Mobile/Mobile%20slider-2.png?updatedAt=1724072366847"
+              }
+            ]
+          },
+          {
+            "desc": "Slider-3",
+            "imgs": [
+              {
+                "type": "Web",
+                "link": "https://ik.imagekit.io/nyatimot/Pages/Films%20page/slider/Web/Web%20slider-3.png?updatedAt=1724072372212"
+              },
+              {
+                "type": "Mobile",
+                "link": "https://ik.imagekit.io/nyatimot/Pages/Films%20page/slider/Mobile/Mobile%20slider-3.png?updatedAt=1724072366562"
+              }
+            ]
+          },
+          {
+            "desc": "Slider-4",
+            "imgs": [
+              {
+                "type": "Web",
+                "link": "https://ik.imagekit.io/nyatimot/Pages/Films%20page/slider/Web/Web%20slider-4.png?updatedAt=1724072373852"
+              },
+              {
+                "type": "Mobile",
+                "link": "https://ik.imagekit.io/nyatimot/Pages/Films%20page/slider/Mobile/Web%20slider-4.png?updatedAt=1724072366203"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "directory": "/website-metadata/NyatiFilms(AboutUs+Productions)Pages",
+    "desc": "-",
+    "content": [
+      {
+        "type": "Images",
+        "desc": "images",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/%20Nyati%20Films%20(About%20Us%20+%20Productions)%20Pages/Image/Main_2.png?updatedAt=1727370819797",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Nyati%20Films%20(About%20Us%20+%20Productions)%20Pages/Image/Background.png?updatedAt=1724072202377",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Nyati%20Films%20(About%20Us%20+%20Productions)%20Pages/Image/image%209.png?updatedAt=1724072110669",
+          "https://ik.imagekit.io/nyatimot/Pages/%20Nyati%20Films%20(About%20Us%20+%20Productions)%20Pages/Image/iPhone%2015%20Pro%20Portrait%20Right%20Mockup.png?updatedAt=1724072091598"
+        ]
+      },
+      {
+        "type": "Logos",
+        "desc": "SVG of logo",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/%20Nyati%20Films%20(About%20Us%20+%20Productions)%20Pages/Logo/Logo.svg?updatedAt=1724072130143"
+        ]
+      }
+    ]
+  },
+  {
+    "directory": "/website-metadata/ConquerorDiePage",
+    "desc": "-",
+    "content": [
+      {
+        "type": "Images",
+        "desc": "images",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/Conquer%20or%20Die%20page/Images/image%2016.png?updatedAt=1724072246981"
+        ],
+        "text": "Conquer or Die is woven around the predicaments of Uganda’s symbols of independent or colonial resistance—Omukama Kabaleega, Kabaka Mwanga, Chief Awich, Chief Katuregye, and Chief Aliku, among others, who are recorded and not recorded in our history for their resistance of foreign aggressors —the British and the ferocious Arab slave raiders. The dynamics of collaborators and resisters are what constructed the pre-existence of what became a colonial Uganda space as a homogenous entity of nations that already collaborated and co-existed in diversity. Most importantly, hypothetically, if the peoples of what later became Uganda were never colonised, they would have evolved into a larger modern state galvanised around the super-power of the time, possibly Kabaleega, Mwanga, Awich, etc."
+      }
+    ]
+  },
+  {
+    "directory": "/website-metadata/ContactUsPage",
+    "desc": "-",
+    "content": [
+      {
+        "type": "Images",
+        "desc": "images",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/Contact%20Us%20page/Images/Background.png?updatedAt=1724072384686",
+          "https://ik.imagekit.io/nyatimot/Pages/Contact%20Us%20page/Images/Image.png?updatedAt=1727376200627"
+        ]
+      }
+    ]
+  },
+  {
+    "directory": "/website-metadata/DonationsPage",
+    "desc": "-",
+    "content": [
+      {
+        "type": "Images",
+        "desc": "images",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/Donations%20page/Images/service%20section-Conquer%20or%20Die.png?updatedAt=1724072339707",
+          "https://ik.imagekit.io/nyatimot/Pages/Donations%20page/Images/service%20section-Tuko%20Pamoja.png?updatedAt=1724072334286"
+        ]
+      },
+      {
+        "type": "Devices",
+        "desc": "images of the product",
+        "files": [
+          "https://ik.imagekit.io/nyatimot/Pages/Donations%20page/Devices/How%20it%20works.png?updatedAt=1724072332102",
+          "https://ik.imagekit.io/nyatimot/Pages/Donations%20page/Devices/Product-Images.png?updatedAt=1724072339879"
+        ]
+      }
+    ]
+  }
+]

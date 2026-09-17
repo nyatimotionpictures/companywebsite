@@ -1,0 +1,325 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import Navigation from '../../2-Components/Navigation/Navigation'
+import Footer from '../../2-Components/Footer/Footer'
+import Buttons from '../../2-Components/Buttons/Buttons'
+
+const PrivacyPolicy = () => {
+    let navigate = useNavigate()
+    return (
+        <div className='relative px-0 w-full h-full bg-secondary-800 overflow-x-hidden select-none'>
+            <Navigation />
+            <div className="flex flex-col w-full h-full gap-0 space-0">
+                <div className="min-h-[60vh] h-full lg:min-h-screen flex flex-col bg-[#141118] items-center justify-center px-[30px] py-16 sm:px-16 md:py-16 lg:py-16 w-screen overflow-hidden relative max-w-[1020px]">
+                    <div className="w-full h-full flex flex-col lg:flex-col mt-16 lg:mt-[60px] justify-between items-center md:px-[5%] md:mt-[60px] py-0 gap-10">
+                        {/** title */}
+                        <div className="flex flex-col gap-4">
+                            <h1 className="text-xl text-left md:text-4xl lg:text-5xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">Privacy Policy</h1>
+
+                            <h2 className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-SemiBold]">Effective Date:  14th November 2024</h2>
+                            <div className="flex flex-col gap-4">
+                                <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70 text-justify">Welcome to the Nyati Motion Pictures (NMP) website. Your privacy is of paramount importance to us. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you use our app, website, and related platforms (collectively referred to as &quot;NyatiFlix&quot;).</p>
+
+                                <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70 text-justify">By downloading, accessing, or using NyatiFlix on the Google Play Store, Apple App Store, or any other platform, you agree to this Privacy Policy. If you do not agree with the terms of this policy, please do not use our service.</p>
+
+                            </div>
+
+                        </div>
+
+                        <div className='w-full flex flex-col'>
+                            <ol className="list-inside list-decimal flex flex-col gap-10 w-full">
+                                
+                                {/** Information we collect */}
+                                <div className='flex flex-col gap-1 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70'>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        Information We Collect
+                                    </li>
+                                    <ol className="list-inside items-start ml-2  list-[lower-alpha] flex flex-col gap-10 w-full indent-0">
+                                        {/** personal */}
+                                        <div className="flex flex-col gap-3">
+                                            <h3 className="list-item text-base md:text-lg lg:text-xl font-[Inter-Bold] text-[#fffaf6] text-opacity-70">Personal Information</h3>
+                                        
+                                            <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">We collect information that identifies you as an individual, including:</p>
+
+                                            
+                                            
+                                            <ul className="list-disc text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70 ml-14 list-outside flex flex-col gap-1  indent-0">
+                                                <li ><span className="font-[Inter-Bold]">Account Registration Information:</span> such as your name, email address, username, password, and payment details.</li>
+                                                <li><span className="font-[Inter-Bold]">Profile Information:</span> including your preferences, watchlist, and viewing history.</li>
+                                                <li><span className="font-[Inter-Bold]">Billing Information:</span> details such as your credit card number, billing address, and payment method (processed securely by our payment providers).</li>
+
+
+                                                </ul>
+                                           
+                                           
+                                        </div>
+
+                                        {/** non-personal */}
+                                        <div className="flex flex-col gap-3">
+                                            <h3 className="list-item text-base md:text-lg lg:text-xl font-[Inter-Bold] text-[#fffaf6] text-opacity-70">Non-Personal Information</h3>
+
+                                            <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">We also collect non-personal information that does not directly identify you, including:</p>
+
+
+
+                                            <ul className="list-disc text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70 ml-14 list-outside flex flex-col gap-1 indent-0">
+                                                <li className="indent-0"><span className="font-[Inter-Bold]">Device Information:</span> such as your IP address, browser type, operating system, device type, and unique device identifiers (such as Apple’s Identifier for Advertisers (IDFA) and Google’s Advertising ID).</li>
+                                                <li ><span className="font-[Inter-Bold]">Usage Information:</span> details about your activity on NyatiFlix, such as pages viewed, content accessed, and interaction data.</li>
+                                                <li><span className="font-[Inter-Bold]">Cookies and Similar Technologies:</span> which track your activity to enhance your experience. See our Cookies Policy for more details.</li>
+
+
+                                            </ul>
+
+
+                                        </div>
+                                       
+                                        {/** Location */}
+                                        <div className="flex flex-col gap-3 ">
+                                            <h3 className="list-item text-base md:text-lg lg:text-xl font-[Inter-Bold] text-[#fffaf6] text-opacity-70">Location Information</h3>
+
+                                            <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70 indent-0 ">With your consent, we may collect location information to personalize content, optimize app performance, and deliver location-based services. You can control location permissions through your device settings.</p>
+
+                                        </div>
+                                    </ol>
+                                </div>
+
+                                {/** How we use Info */}
+                                <div className='flex flex-col gap-4 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70 '>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        How We Use Your Information
+                                    </li>
+
+                                
+                                    <div className="flex flex-col gap-3">
+                                        
+
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">NyatiFlix may use the information we collect for the following purposes:</p>
+
+
+
+                                        <ul className="list-disc text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70 ml-14 list-outside flex flex-col gap-1  indent-0">
+                                            <li ><span className="font-[Inter-Bold]">Providing and Improving Our Service: </span> to deliver content, process transactions, manage your account, and personalize recommendations.</li>
+                                            <li><span className="font-[Inter-Bold]">Customer Support:</span> to respond to your inquiries, support requests, and troubleshoot issues.</li>
+                                            <li><span className="font-[Inter-Bold]">Analytics and Research: </span>  to monitor usage patterns, analyze trends, and improve NyatiFlix’s features, services, and user experience.</li>
+                                            <li><span className="font-[Inter-Bold]">Marketing and Promotions: </span>  to deliver promotional content, notifications, and offers tailored to your preferences, unless you opt out.</li>
+                                            <li><span className="font-[Inter-Bold]">Legal Compliance: </span>  to comply with applicable laws, regulations, or legal processes and to enforce our <span className="cursor-pointer text-primary-500 italic" onClick={()=> navigate("/policies/termsofservice")}>Terms of Service</span>.</li>
+
+
+                                        </ul>
+
+
+                                    </div>
+                                    
+                                </div>
+
+                                {/** Sharing your Information */}
+                                <div className='flex flex-col gap-4 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70 '>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        Sharing Your Information
+                                    </li>
+
+
+                                    <div className="flex flex-col gap-3">
+
+
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">NyatiFlix does not sell your personal information to third parties. We may share your information under the following conditions:</p>
+
+
+
+                                        <ul className="list-disc text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70 ml-14 list-outside flex flex-col gap-1  indent-0">
+                                            <li ><span className="font-[Inter-Bold]">Service Providers: </span> with third-party vendors, contractors, or agents who perform services on our behalf, such as payment processing and customer support.</li>
+                                            <li><span className="font-[Inter-Bold]">Business Transfers:</span> in connection with any merger, sale of company assets, financing, or acquisition of all or a portion of our business.</li>
+                                            <li><span className="font-[Inter-Bold]">Analytics and Research: </span>  to monitor usage patterns, analyze trends, and improve NyatiFlix’s features, services, and user experience.</li>
+                                            <li><span className="font-[Inter-Bold]">Legal Obligations: </span>   if required by law or in response to a legal request (e.g., court order, government inquiry).</li>
+                                            <li><span className="font-[Inter-Bold]">Protection of Rights: </span> to protect the rights, property, or safety of NyatiFlix, its users, or the public as required or permitted by law.</li>
+
+
+                                        </ul>
+
+
+                                    </div>
+
+                                </div>
+
+                                {/** Your Privacy Choices */}
+                                <div className='flex flex-col gap-1 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70'>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        Your Privacy Choices
+                                    </li>
+                                    <ol className="list-inside items-start ml-2  list-[lower-alpha] flex flex-col gap-6 w-full indent-0">
+                                        {/** personal */}
+                                        <div className="flex flex-col gap-2">
+                                            <h3 className="list-item text-base md:text-lg lg:text-xl font-[Inter-Bold] text-[#fffaf6] text-opacity-70">Access and Update Your Information</h3>
+
+                                            <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">You can access, review, and update your personal information by logging into your account settings on NyatiFlix.</p>
+
+                                        </div>
+
+                                        {/** non-personal */}
+                                        <div className="flex flex-col gap-2 ">
+                                            <h3 className="list-item text-base md:text-lg lg:text-xl font-[Inter-Bold] text-[#fffaf6] text-opacity-70">Cookies and Tracking Technologies</h3>
+
+                                            <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70 indent-0 ">You can manage your cookie preferences by adjusting your browser settings. Please note, however, that disabling cookies may impact the functionality of NyatiFlix.</p>
+
+                                        </div>
+
+                                        {/** Location */}
+                                        <div className="flex flex-col gap-2 ">
+                                            <h3 className="list-item text-base md:text-lg lg:text-xl font-[Inter-Bold] text-[#fffaf6] text-opacity-70">Manage Location Data and App Permissions</h3>
+
+                                            <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70 indent-0 ">You can control or restrict access to certain information, such as location data, by adjusting your device’s privacy settings.</p>
+
+                                        </div>
+                                    </ol>
+                                </div>
+
+                                {/** Data Security */}
+                                <div className='flex flex-col gap-4 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70 '>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        Data Security
+                                    </li>
+
+
+                                    <div className="flex flex-col gap-3">
+
+
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">We implement industry-standard security measures to protect your information. However, no electronic transmission or storage method is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee absolute security.</p>
+
+                                    </div>
+
+                                </div>
+
+                                {/** Data Rentention */}
+                                <div className='flex flex-col gap-4 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70 '>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        Data Retention
+                                    </li>
+
+
+                                    <div className="flex flex-col gap-3">
+
+
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">We retain your personal information for as long as necessary to provide our services, comply with legal obligations, resolve disputes, and enforce our policies. We may retain aggregated or anonymized data for research or analytical purposes indefinitely.</p>
+
+                                    </div>
+
+                                </div>
+
+                                {/** Children Privacy */}
+                                <div className='flex flex-col gap-4 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70 '>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        Children&apos;s Privacy
+                                    </li>
+
+
+                                    <div className="flex flex-col gap-3">
+
+
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">NyatiFlix does not knowingly collect personal information from children under the age of 13. If we become aware that we have collected information from a child without parental consent, we will take steps to delete that information promptly.</p>
+
+                                    </div>
+
+                                </div>
+
+                                {/** Compliance */}
+                                <div className='flex flex-col gap-4 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70 '>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        Compliance with Google Play and Apple App Store Policies
+                                    </li>
+
+
+                                    <div className="flex flex-col gap-3">
+
+
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">This Privacy Policy is designed to comply with the privacy and data requirements of the Google Play Store and Apple App Store. We ensure transparency in data collection and provide users with control over their information, including options for managing permissions, data sharing, and opting out of marketing communications.</p>
+
+                                    </div>
+
+                                </div>
+
+                                {/** International Data Transfers */}
+                                <div className='flex flex-col gap-4 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70 '>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        International Data Transfers
+                                    </li>
+
+
+                                    <div className="flex flex-col gap-3">
+
+
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">Your information may be transferred to and processed in countries other than your country of residence. By using NyatiFlix, you consent to the transfer of information to countries that may have different data protection laws.</p>
+
+                                    </div>
+
+                                </div>
+
+                                {/** Changes to Privacy Policy */}
+                                <div className='flex flex-col gap-4 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70 '>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        Changes to This Privacy Policy
+                                    </li>
+
+
+                                    <div className="flex flex-col gap-3">
+
+
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">We may update this Privacy Policy periodically. When we make changes, we will post the updated policy on this page and update the &quot;Effective Date&quot; at the top. We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
+
+                                    </div>
+
+                                </div>
+
+                                {/** Contact us */}
+                                <div className='flex flex-col gap-4 justify-start pb-4 border-b border-b-[#5A575B] border-opacity-70 '>
+                                    <li className="text-xl text-left md:text-2xl lg:text-3xl text-[#F2F2F2] font-bold capitalize font-[Inter-Bold]">
+                                        Contact Us
+                                    </li>
+
+
+                                    <div className="flex flex-col gap-3">
+
+
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+
+                                        <div className='flex flex-col gap-1'>
+                                            <h3 className=" text-base md:text-lg lg:text-xl font-[Inter-Bold] text-[#fffaf6] text-opacity-70">Nyati Motion Pictures</h3>
+
+                                            <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">P.O. Box 74733, Wakiso, Uganda</p>
+                                            <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">Phone: +256 778 787 660</p>
+                                            <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">Email: info@nyatimotionpictures.com</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                {/** Support */}
+                                <div className="flex flex-col gap-4 w-full pb-4 ">
+                                    <div className='flex flex-col gap-3'>
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-Regular] text-[#fffaf6] text-opacity-70">By using NyatiFlix, you acknowledge that you have read, understood, and agree to this Privacy Policy.</p>
+                                    </div>
+
+                                    <div className="flex flex-col gap-4 w-full pt-4 ">
+                                        <p className="text-xs md:text-base lg:text-lg font-[Inter-SemiBold] text-[#fffaf6] text-opacity-70">Other Links</p>
+
+                                        <div className="flex flex-col sm:flex-row gap-5">
+                                            <Buttons className='w-max text-primary-500 bg-[#1A171E] rounded-md min-w-[150px] px-6 py-3 italic font-[Inter-Bold] tracking-wider text-xs  sm:text-sm md:text-base uppercase' onClick={() => navigate("/policies/deletepolicy")} >DELETE ACCOUNT  Policy</Buttons>
+                                            <Buttons className='w-max text-primary-500 bg-[#1A171E] rounded-md min-w-[150px] px-6 py-3 italic font-[Inter-Bold] tracking-wider text-xs  sm:text-sm md:text-base uppercase' onClick={() => navigate("/policies/termsofservice")}>TERMS OF SERVICE</Buttons>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ol>
+                        </div>
+                       
+
+                      
+
+                    
+                    </div>
+                </div>
+            </div>
+            <Footer />
+        </div>
+    )
+}
+
+export default PrivacyPolicy

@@ -1,0 +1,75 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  
+}
+
+* {
+
+
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 639px) {
+    .phoneInputContainer {
+            width: 100% !important;
+            height: 30px !important;
+        border-top-left-radius: 0.5rem !important;
+            border-bottom-left-radius: 0.5rem !important;
+        }   
+        .phoneInput {
+            width: 100% !important;
+            height: 30px !important;
+    
+        }
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 640px) {
+    .phoneInputContainer {
+            width: 100% !important;
+            height: 40px !important;
+            border-top-left-radius: 0.5rem !important;
+                border-bottom-left-radius: 0.5rem !important;
+                font-size:0.875rem !important;
+                line-height:1.25rem !important;
+                font-family: Roboto-Regular !important;
+        }
+    
+        .phoneInput {
+            width: 100% !important;
+            height: 40px !important;
+    
+        }
+                .phoneInput::placeholder {
+                   color:aquamarine
+        
+                }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+   
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+    
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+    
+} */
+
+
