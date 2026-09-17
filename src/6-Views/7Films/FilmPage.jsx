@@ -36,7 +36,7 @@ const FilmPage = () => {
     <div className="relative px-0 w-full min-h-[100vh] h-full bg-secondary-800 !overflow-x-hidden overflow-y-auto">
       <SEO 
         title="Featured Films and Documentaries" 
-        description="Explore the captivating films and documentaries by Nyati Motion Pictures, showcasing the rich storytelling heritage of Uganda and East African."
+        description="Explore the captivating films and documentaries by Nyati Motion Pictures, showcasing the rich storytelling heritage of Uganda and East Africa."
         keywords="Nyati Motion Pictures films, Ugandan films, East African documentaries, feature films Uganda, film production Uganda, storytelling films East Africa, Ugandan filmmakers, African documentaries, watch Ugandan films, East African cinema"
         url="https://www.nyatimotionpictures.com/film"
         structuredData={filmSchema}

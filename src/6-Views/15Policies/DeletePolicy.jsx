@@ -3,11 +3,17 @@ import Navigation from '../../2-Components/Navigation/Navigation'
 import Footer from '../../2-Components/Footer/Footer'
 import Buttons from '../../2-Components/Buttons/Buttons'
 import { useNavigate } from 'react-router-dom'
+import SEO from '../../2-Components/SEOHelmet/SEO'
 
 const DeletePolicy = () => {
   let navigate = useNavigate()
   return (
     <div className='relative px-0 w-full h-full bg-secondary-800 overflow-x-hidden select-none'>
+      <SEO 
+        title="Account Deletion Policy"
+        description="Learn how to delete your Nyatiflix account and understand our data deletion and retention policies."
+        url="https://www.nyatimotionpictures.com/policies/deletepolicy"
+      />
       <Navigation />
 
       <div className="flex flex-col w-full h-full gap-0 space-0">

@@ -1,13 +1,19 @@
 
 import React from "react";
 import Navigation from "../../2-Components/Navigation/Navigation";
-import Footer from '../../2-Components/Footer/Footer'
+import Footer from '../../2-Components/Footer/Footer';
+import SEO from '../../2-Components/SEOHelmet/SEO';
 
 const ErrorPage = () => {
     //const error = useRouteError();
 
   return (
       <div className='relative px-0 w-full h-full bg-secondary-800 overflow-x-hidden select-none'>
+          <SEO 
+            title="Page Not Found"
+            description="Sorry, the page you are looking for cannot be found or has been moved."
+            noindex={true}
+          />
           <Navigation />
           <div className="flex flex-col w-full h-full gap-0 space-0">
               <div className="min-h-[60vh] h-full lg:min-h-screen flex flex-col bg-[#141118] items-center justify-center px-[30px] py-16 sm:px-16 md:py-16 lg:py-16 w-screen overflow-hidden relative">

@@ -24,42 +24,39 @@ const CLeftSection = () => {
 
 
     React.useEffect(() => {
-        setAllCategories(() => ([{
+        setAllCategories([{
             title: "All"
-        }, ...archivesCategories]))
-        setActiveTab(() => [{
-            title: "All"
-        }, ...archivesCategories][0].title)
-    }, [archivesCategories, location])
+        }, ...archivesCategories]);
+    }, []);
 
     React.useEffect(() => { 
-     //   console.log("location", location.state)
+        const searchParams = new URLSearchParams(location.search);
+        const categoryParam = location.state?.category || searchParams.get("category");
+        const monthParam = location.state?.month || searchParams.get("month");
+        const yearParam = location.state?.year || searchParams.get("year");
 
-        if (location.state && location.state?.category) {
-
-          
-             archivesCategories.filter((data,index) => {
-                 if (data.title === location.state.category) {
-                    
-                    return setActiveTab(() => data.title)
-                 } else if (data.title !== location.state.category && index === archivesCategories.length) {
-                     return setActiveTab(() => allCategories[0].title)
-                }
-            })
+        if (categoryParam) {
+            const matchedCategory = archivesCategories.find(
+                (data) => data.title.toLowerCase() === categoryParam.toLowerCase()
+            );
+            if (matchedCategory) {
+                setActiveTab(matchedCategory.title);
+            } else {
+                setActiveTab("All");
+            }
         } else {
-            setActiveTab(() => "All")
+            setActiveTab("All");
         }
 
-        if (location.state && location.state?.month && location.state?.year) {
+        if (monthParam && yearParam) {
             setMonthYearFilter({
-                year: location.state?.year,
-                month: location.state?.month
-            })
+                year: yearParam,
+                month: monthParam
+            });
         } else {
-            setMonthYearFilter(()=> null) 
+            setMonthYearFilter(null);
         }
-
-    }, [location])
+    }, [location]);
 
     const getFilteredData = (tab, filterOption) => {
       return  archivesData.filter((data, index) => {
@@ -180,13 +177,23 @@ const CLeftSection = () => {
                 <div className="hidden md:flex flex-row gap-[4px]">
                     {
                         allCategories.map((data) => {
-                            return <Buttons key={data.title} onClick={() => location.state?.category ? navigate(`/internetarchive/collections?category=${data.title}`, {
-                                  state: {
-                                      category: data.title
-                                  }
-                              }) : setActiveTab(() => data.title)} className={`font-[Inter-Medium] text-sm py-[8.5px] px-[12px] bg-transparent text-[#7F7075] hover:bg-transparent border border-transparent hover:border-primary-500 ${data.title === activeTab ? "border-primary-500 bg-[#928587] bg-opacity-5 text-[#141118]" : "text-[#7F7075] border-transparent" }`}>{data.title}</Buttons>
+                            return (
+                                <Buttons 
+                                    key={data.title} 
+                                    onClick={() => {
+                                        if (data.title === "All") {
+                                            navigate("/internetarchive/collections");
+                                        } else {
+                                            navigate(`/internetarchive/collections?category=${encodeURIComponent(data.title)}`);
+                                        }
+                                    }} 
+                                    className={`font-[Inter-Medium] text-sm py-[8.5px] px-[12px] bg-transparent text-[#7F7075] hover:bg-transparent border border-transparent hover:border-primary-500 ${data.title === activeTab ? "border-primary-500 bg-[#928587] bg-opacity-5 text-[#141118]" : "text-[#7F7075] border-transparent" }`}
+                                >
+                                    {data.title}
+                                </Buttons>
+                            );
                         })
-        }
+                    }
                 </div>
 
                 <Buttons onClick={() => navigate("/internetarchive")} className="select-none bg-primary-500 rounded-full px-5 font-[Roboto-Medium] text-sm">

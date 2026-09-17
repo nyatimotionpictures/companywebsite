@@ -42,59 +42,89 @@ const FilmDetailPage = () => {
         };
     }, [filmid]);
 
-  const filmIdSchema = {
-        "@context": "http://schema.org",
-        "@type": "LocalBusiness", // Consider changing this to "Movie" for film pages
-        "name": singleWebFilm ? singleWebFilm.title : "Nyati Motion Pictures",
-        "image": "https://ik.imagekit.io/nyatimot/Pages/Universal+Home/Logos/Logo1.svg?updatedAt=1724072184503",
-        "url": `https://www.nyatimotionpictures.com/film/${filmid}`,
-        "telephone": "+256 778 787 660",
-        "email": "info@nyatimotionpictures.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Wakiso",
-            "addressCountry": "Uganda",
-            "postalCode": "74733"
-        },
-        "sameAs": [
-            "https://x.com/NyatiMPictures",
-            "https://www.facebook.com/nyati.motionpictures",
-            "https://www.youtube.com/@Nyatimotionpictures"
-        ]
-    };
+  const movieSchema = singleWebFilm ? {
+    "@context": "https://schema.org",
+    "@type": singleWebFilm.filmType === "series" ? "TVSeries" : "Movie",
+    "name": singleWebFilm.title,
+    "image": Array.isArray(singleWebFilm.posters) && singleWebFilm.posters.length > 0 
+      ? singleWebFilm.posters[0] 
+      : (typeof singleWebFilm.posters === 'string' ? singleWebFilm.posters : "https://www.nyatimotionpictures.com/og-image.jpg"),
+    "description": singleWebFilm.overview || singleWebFilm.plotSummary || "Explore this captivating film by Nyati Motion Pictures, showcasing the rich storytelling heritage of Uganda and East Africa.",
+    "dateCreated": singleWebFilm.YearOfProduction || undefined,
+    "datePublished": singleWebFilm.released || undefined,
+    "genre": singleWebFilm.genre || undefined,
+    "director": singleWebFilm.directors?.map((d) => ({
+      "@type": "Person",
+      "name": d
+    })),
+    "actor": singleWebFilm.actors?.map((a) => ({
+      "@type": "Person",
+      "name": a
+    })),
+    "creator": singleWebFilm.writers?.map((w) => ({
+      "@type": "Person",
+      "name": w
+    })),
+    "producer": singleWebFilm.producers?.map((p) => ({
+      "@type": "Person",
+      "name": p
+    })),
+    "productionCompany": {
+      "@type": "Organization",
+      "name": "Nyati Motion Pictures",
+      "url": "https://www.nyatimotionpictures.com"
+    },
+    "url": `https://www.nyatimotionpictures.com/film/${filmid}`
+  } : {
+    "@context": "https://schema.org",
+    "@type": "Movie",
+    "name": "Nyati Motion Pictures Film",
+    "url": `https://www.nyatimotionpictures.com/film/${filmid}`,
+    "productionCompany": {
+      "@type": "Organization",
+      "name": "Nyati Motion Pictures",
+      "url": "https://www.nyatimotionpictures.com"
+    }
+  };
 
-    // Set up fallbacks for SEO content while the film data is loading
-    const seoTitle = singleWebFilm?.title || "Featured Film";
-    const seoDescription = singleWebFilm?.overview || singleWebFilm?.synopsis || "Explore this captivating film by Nyati Motion Pictures, showcasing the rich storytelling heritage of Uganda and East Africa.";
-    const seoImage = singleWebFilm?.posters || "https://www.nyatimotionpictures.com/og-image.jpg";
+  // Set up fallbacks for SEO content while the film data is loading
+  const seoTitle = singleWebFilm?.title || "Featured Film";
+  const seoDescription = singleWebFilm?.overview || singleWebFilm?.synopsis || "Explore this captivating film by Nyati Motion Pictures, showcasing the rich storytelling heritage of Uganda and East Africa.";
+  const seoImage = Array.isArray(singleWebFilm?.posters) && singleWebFilm.posters.length > 0
+    ? singleWebFilm.posters[0]
+    : (typeof singleWebFilm?.posters === 'string' ? singleWebFilm.posters : "https://www.nyatimotionpictures.com/og-image.jpg");
+  const seoKeywords = singleWebFilm?.genre 
+    ? `${singleWebFilm.title}, ${singleWebFilm.genre.join(", ")}, Ugandan film, East African cinema, Nyati Motion Pictures` 
+    : "Nyati Motion Pictures films, Ugandan films, East African documentaries, feature films Uganda";
 
-    const onOpen_T_Modal = () => {
-        setOpenTrailerModal(() => true);
-    };
-    const onClose_T_Modal = () => {
-        setOpenTrailerModal(() => false);
-    };
+  const onOpen_T_Modal = () => {
+    setOpenTrailerModal(() => true);
+  };
+  const onClose_T_Modal = () => {
+    setOpenTrailerModal(() => false);
+  };
 
-    {/** open local Modal */ }
-    const onOpen_L_Modal = () => {
-        setLocalOpenTrailerModal(() => true);
-    };
-    const onClose_L_Modal = () => {
-        setLocalOpenTrailerModal(() => false);
-    };
+  {/** open local Modal */ }
+  const onOpen_L_Modal = () => {
+    setLocalOpenTrailerModal(() => true);
+  };
+  const onClose_L_Modal = () => {
+    setLocalOpenTrailerModal(() => false);
+  };
 
     
   return (
-      <>
-        {/* Dynamically passing the loaded film data to the SEO component */}
-            <SEO 
-                title={seoTitle} 
-                description={seoDescription}
-                keywords="Nyati Motion Pictures films, Ugandan films, East African documentaries, feature films Uganda"
-                url={`https://www.nyatimotionpictures.com/film/${filmid}`}
-                image={seoImage}
-                structuredData={filmIdSchema}
-            />{/* Added SEO component here for SEO metadata */}
+    <>
+      {/* Dynamically passing the loaded film data to the SEO component */}
+      <SEO 
+        title={seoTitle} 
+        description={seoDescription}
+        keywords={seoKeywords}
+        url={`https://www.nyatimotionpictures.com/film/${filmid}`}
+        image={seoImage}
+        type="video.movie"
+        structuredData={movieSchema}
+      />{/* Added SEO component here for SEO metadata */}
       
           <Container className="px-0 w-full h-full relative flex-col space-y-0 bg-secondary-800 overflow-x-hidden">
               <Navigation />

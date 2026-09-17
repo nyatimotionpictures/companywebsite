@@ -1,6 +1,7 @@
 import React from 'react'
 import Navigation from '../../2-Components/Navigation/Navigation'
 import Footer from '../../2-Components/Footer/Footer'
+import SEO from '../../2-Components/SEOHelmet/SEO'
 //import nyatiflixImg from "../../1-Assets/Nyatiflix_Soon.png"
 
 const nyatiflixImg ="https://ik.imagekit.io/nyatimot/Pages/ComingSoon/Nyatiflix_Soon.png?updatedAt=1729770652793"
@@ -27,6 +28,13 @@ const ExpectedFeatures = [
 const NyatiFlixSoon = () => {
   return (
       <div className='relative px-0 w-full h-full bg-secondary-800 overflow-x-hidden select-none'>
+          <SEO 
+            title="NyatiFlix Streaming | Coming Soon"
+            description="Nyatiflix is an upcoming on-demand African streaming platform by Nyati Motion Pictures offering original movies, documentaries, and series."
+            keywords="NyatiFlix, African streaming platform, watch Ugandan films, Nyati Motion Pictures streaming"
+            url="https://www.nyatimotionpictures.com/comingsoon"
+            image={nyatiflixImg}
+          />
           <Navigation />
 
           <div className="flex flex-col w-full h-full gap-0 space-0">

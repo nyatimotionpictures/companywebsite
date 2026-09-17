@@ -9,7 +9,8 @@ const SEO = ({
   image = "https://www.nyatimotionpictures.com/og-image.jpg",
   type = "website",
   keywords,
-  structuredData = null
+  structuredData = null,
+  noindex = false
 }) => {
   const siteName = "Nyati Motion Pictures";
   
@@ -27,7 +28,7 @@ const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
 
       {/* Open Graph (OG) */}
       <meta property="og:title" content={fullTitle} />

@@ -32,7 +32,7 @@ const Team = () => {
     <div className="relative px-0 w-full h-full bg-secondary-900 !overflow-x-hidden overflow-y-auto ">
       <SEO 
         title="Meet Our Team" 
-        description="Meet the talented team behind Nyati Motion Pictures[cite: 5]. Our Ugandan filmmakers, producers, and creative experts are dedicated to bringing East African stories to life[cite: 5]."
+        description="Meet the talented team behind Nyati Motion Pictures. Our Ugandan filmmakers, producers, and creative experts are dedicated to bringing East African stories to life."
         keywords="Nyati Motion Pictures team, Ugandan filmmakers, film production team Uganda, East African film industry, Kampala film production, creative experts Uganda, film producers Uganda, African storytelling team, Ugandan directors, Ugandan production team, East African filmmakers"
         url="https://www.nyatimotionpictures.com/team"
         structuredData={teamSchema}

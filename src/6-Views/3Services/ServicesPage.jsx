@@ -39,7 +39,7 @@ const ServicesPage = () => {
 
       <SEO 
         title="Our Services" 
-        description="Discover the range of services offered by Nyati Motion Pictures, a Ugandan film production company[cite: 4]. We specialize in film production, TV shows, documentaries, post-production, and more across Uganda and East Africa[cite: 4]."
+        description="Discover the range of services offered by Nyati Motion Pictures, a Ugandan film production company. We specialize in film production, TV shows, documentaries, post-production, and more across Uganda and East Africa."
         keywords="Nyati Motion Pictures services, Ugandan film production, TV show production Uganda, documentary production Uganda, East African filmmakers, post-production Uganda, video editing Uganda, film studio Kampala, production services Uganda, African storytelling, Ugandan filmmakers"
         url="https://www.nyatimotionpictures.com/services"
         structuredData={servicesSchema}

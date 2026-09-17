@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import HomePage from "./6-Views/1Home/HomePage";
 import './App.css'
 import { StyledEngineProvider } from "@mui/material/styles";
-import SEO from './2-Components/SEOHelmet/SEO.jsx';
+
+
 import AboutPage from "./6-Views/2AboutNyati/AboutPage.jsx";
 import ServicesPage from "./6-Views/3Services/ServicesPage.jsx";
 import ProdDetailPage from "./6-Views/4ProdDetails/ProdDetailPage.jsx";
@@ -30,9 +32,18 @@ import DonationPay from "./6-Views/17Donations/DonationPay.jsx";
 import DonationValidation from "./6-Views/17Donations/DonationValidation.jsx";
 import PesaCancel from "./6-Views/18PesaPalApp/PesaCancel.jsx";
 import PesaSuccess from "./6-Views/18PesaPalApp/PesaSuccess.jsx";
+import SEO from "./2-Components/SEOHelmet/SEO.jsx";
+
+const NoIndexPage = ({ title, children }) => (
+  <>
+    <SEO title={title} noindex={true} />
+    {children}
+  </>
+);
 
 function App() {
   return (
+    <HelmetProvider>
     <StyledEngineProvider injectFirst>
       <BrowserRouter>
         <ScrollToTop> {/* Wrap Routes with ScrollToTop */}
@@ -49,9 +60,10 @@ function App() {
             <Route path="/internetarchive" element={<MainArchivePage />} /> 
             <Route path="/internetarchive/collections" element={<CollectionListPage />} />
             <Route path="/internetarchive/collections/:cname" element={<IndivCollectionPage />} />
+            
             {/** PAY */}
-            <Route path="/pay-response" element={<PaymentResponse />} />
-            <Route path="/mpay-validate" element={<MobilePayValidation />} />
+            <Route path="/pay-response" element={<NoIndexPage title="Payment Response"><PaymentResponse /></NoIndexPage>} />
+            <Route path="/mpay-validate" element={<NoIndexPage title="Payment Validation"><MobilePayValidation /></NoIndexPage>} />
             <Route path="/comingsoon" element={<NyatiFlixSoon />} />
             <Route path="/policies/deletepolicy" element={<DeletePolicy />} />
             <Route path="/policies/privacypolicy" element={<PrivacyPolicy />} />
@@ -60,31 +72,32 @@ function App() {
             {/** mm payments */}
             <Route
               path="/film/process/:userId/:resourceId"
-              element={<ProcessingPay />}
+              element={<NoIndexPage title="Payment Processing"><ProcessingPay /></NoIndexPage>}
             />
             <Route
               path="/film/validate/:orderTrackingId"
-              element={<PaymentValidation />}
+              element={<NoIndexPage title="Payment Validation"><PaymentValidation /></NoIndexPage>}
             />
 
             <Route
               path="/donate/process/:userId/:filmId"
-              element={<DonationPay />}
+              element={<NoIndexPage title="Donation Processing"><DonationPay /></NoIndexPage>}
             />
             <Route
               path="/donate/validate/:orderTrackingId"
-              element={<DonationValidation />}
+              element={<NoIndexPage title="Donation Validation"><DonationValidation /></NoIndexPage>}
             />
 
-{/** Add success page for pesapal */}
-<Route path="/donate/pesapay/success" element={<PesaSuccess />} />
+            {/** Add success page for pesapal */}
+            <Route path="/donate/pesapay/success" element={<NoIndexPage title="Payment Successful"><PesaSuccess /></NoIndexPage>} />
             {/** Add cancel page for pesapal */}
-            <Route path="/donate/pesapay/cancel" element={<PesaCancel />} />
+            <Route path="/donate/pesapay/cancel" element={<NoIndexPage title="Payment Cancelled"><PesaCancel /></NoIndexPage>} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </ScrollToTop>
       </BrowserRouter>
     </StyledEngineProvider>
+    </HelmetProvider>
   );
 }
 

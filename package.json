@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "host": "vite --host",
-    "generate-sitemap": "rimraf public/sitemap.xml && node seo_scripts/generate-sitemap.js",
-    "build": "rimraf dist && npm run generate-sitemap && vite build",
+    "generate-sitemap": "rimraf public/sitemap.xml && node seo_scripts/generate-sitemap.js && node seo_scripts/prerender.js",
+    "build": "rimraf dist && vite build && npm run generate-sitemap",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -33,7 +33,6 @@
     "query-string": "^9.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-helmet": "^6.1.0",
     "react-helmet-async": "^3.0.0",
     "react-icons": "^5.2.1",
     "react-phone-input-2": "^2.15.1",
@@ -63,6 +62,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "postcss": "^8.4.39",
+    "puppeteer": "^25.11.0",
     "tailwindcss": "^3.4.4",
     "vite": "^5.3.1"
   }
