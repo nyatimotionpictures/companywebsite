@@ -35,26 +35,26 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <div className="text-[#8b8789] font-[Inter-Medium] text-[16px]">
               <NavLink className="hover:text-[#dcdbdc]" to="/film/6653925ab30afd15ac294f7a" >
-              Tuko Pamoja
+              <span className="italic">Tuko Pamoja</span> (2024)
               </NavLink>
               
             </div>
             <div className="text-[#8b8789] font-[Inter-Medium] text-[16px]">
               <NavLink className="hover:text-[#dcdbdc]" to="/film/665383c3b30afd15ac294f79">
-                Fate(2006)
+                <span className="italic">Fate</span> (2006)
               </NavLink>
             
             </div>
             <div className="text-[#8b8789] font-[Inter-Medium] text-[16px]">
               <NavLink className="hover:text-[#dcdbdc]" to="/film/66504774b30afd15ac294f77">
-                Fair Play{" "}
+                <span className="italic">Fair Play</span> (2010) {" "}
               </NavLink>
             
             </div>
             <div className="text-[#8b8789] font-[Inter-Medium] text-[16px]">
               <NavLink className="hover:text-[#dcdbdc]" to="/film/6653809ab30afd15ac294f78">
                 <span>
-                  Windows of Hope (2011){" "}
+                  <span className="italic">Windows of Hope</span> (2011){" "}
                 </span>
              
               </NavLink>
