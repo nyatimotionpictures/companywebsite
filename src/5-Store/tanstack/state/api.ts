@@ -1,16 +1,18 @@
 import axios, { AxiosError } from "axios";
-import apiRequest from "../../../3-Middleware/apiRequest";
-import { BASE_API } from "../../../3-Middleware/base-url.config";
+//import apiRequest from "../../../3-Middleware/apiRequest";
+import { BASE_API_V2 } from "../../../3-Middleware/base-url.config";
 
 interface ErrorResponse {
   message: string;
 }
 export interface paymentRequest {
   userId: string;
-  videoId: string;
+  resourceId: string;
+  resourceType: "film" | "season";
+  resolution: "SD" | "HD" | "FHD" | "UHD";
   option: string;
-  phoneCode: string;
   paymentNumber: string;
+  type?: "streamWeb" | null;
 }
 interface paymentRequestResponse {
   orderTrackingId: string;
@@ -36,16 +38,16 @@ export const postPaymentProcess = async (
     let token = localStorage.getItem("token");
     let { ...rest } = details;
     const response = await axios.post<paymentRequestResponse>(
-      `${BASE_API}/film/purchase`,
+      `${BASE_API_V2}/film/purchase`,
       {
         ...rest,
-        
-      },{
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      }
+
+      }, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    }
     );
     //console.log("response", response.data);
     return response.data;
@@ -64,7 +66,7 @@ export const getPaymentStatus = async (
     console.log("orderId", orderId);
     let token = localStorage.getItem("token");
     const response = await axios.get<paymentStatusResponse>(
-    `${BASE_API}/film/checkpaymentstatus/${orderId}`, {
+      `${BASE_API_V2}/film/checkpaymentstatus/${orderId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
@@ -88,13 +90,13 @@ export const postDonationProcess = async (
     let token = localStorage.getItem("token");
     let { userId, filmId, ...rest } = details;
     const response = await axios.post(
-      `${BASE_API}/film/donate/${userId}/${filmId}`,
+      `${BASE_API_V2}/film/donate/${userId}/${filmId}`,
       rest, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      }
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    }
     );
 
     // const response = await axios.post(
@@ -105,7 +107,7 @@ export const postDonationProcess = async (
     //     "phoneCode": "+256",
     //     "paymentNumber": "782765353",
     //       "filmtitle": "Fair Play"
-        
+
     //   }, {
     //     headers: {
     //       Authorization: `Bearer ${token}`,
@@ -127,7 +129,7 @@ export const getDonationStatus = async (
 ): Promise<paymentStatusResponse> => {
   try {
     const response = await axios.get<paymentStatusResponse>(
-       `http://localhost:4500/api/v1/film/checkpaymentstatus/${orderId}`
+      `${BASE_API_V2}/film/checkpaymentstatus/${orderId}`
     );
     //console.log("response", response.data);
     return response.data;

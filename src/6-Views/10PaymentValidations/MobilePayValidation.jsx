@@ -3,7 +3,7 @@ import LogoImg from "../../1-Assets/logo/logo.svg";
 import { useSearchParams } from 'react-router-dom';
 import axios from "axios";
 import { useLocation } from 'react-router-dom';
-import { BASE_API } from '../../3-Middleware/base-url.config.js';
+import { BASE_API, BASE_API_V2 } from '../../3-Middleware/base-url.config.js';
 
 import PaymentFailed from '../../2-Components/MobilePayModes/PaymentFailed.jsx';
 import PaymentProcessing from '../../2-Components/MobilePayModes/PaymentProcessing.jsx';
@@ -16,7 +16,7 @@ const getSubmissionLink = (payMethod) => {
         case "Airtel":
             return `${BASE_API}/payment/airtel`
         case "Mtn":
-            return `${BASE_API}/payment/mtn`
+            return `${BASE_API_V2}/payment/mtn`
     }
 }
 

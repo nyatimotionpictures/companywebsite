@@ -6,7 +6,7 @@ import * as yup from "yup";
 import axios from "axios";
 import { Form, Formik } from "formik";
 import CustomLoader from './CustomLoader';
-import { BASE_API } from '../../3-Middleware/base-url.config';
+import { BASE_API, BASE_API_V2 } from '../../3-Middleware/base-url.config';
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
@@ -62,7 +62,7 @@ const DonateContent = ({ innerref, handleStepNext, stepperData, currentStep, set
         }, 1000);
       } else if (submitValues.paymentType === "MTN") {
         // MTN DONATION PAYMENT
-        let axiosPost = await axios.post(`${BASE_API}/payment/mtn/donate`, submitValues, {
+        let axiosPost = await axios.post(`${BASE_API_V2}/payment/mtn/donate`, submitValues, {
           headers: { 'content-type': 'application/json' }
         })
 

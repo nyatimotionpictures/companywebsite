@@ -11,19 +11,21 @@ const ProcessingPay = () => {
   const [errorMessage, setErrorMessage] = React.useState(null);
   const [searchParams] = useSearchParams();
   const search = qs.parse(searchParams.toString());
+  // older app builds send filmTitle
+  const filmTitle = search?.filmtitle ?? search?.filmTitle;
   let navigate = useNavigate();
   const usePayMutation = usePurchaseFilm();
   /**
    * Query string
-   * token, option, phoneCode, paymentNumber, filmtitle
+   * token, option, paymentNumber, filmtitle, resourceType, resolution, price
    * 
-   * userId, videoId
+   * userId, resourceId (the film, or the season for a season purchase)
    * 
    */
   React.useEffect(()=> {
 
     localStorage.setItem("token", search?.token)
-    localStorage.setItem("filmtitle", search?.filmtitle)
+    localStorage.setItem("filmtitle", filmTitle)
      localStorage.setItem("userId", params?.userId)
      localStorage.setItem("resourceId", params?.resourceId)
     // localStorage.setItem("phoneCode", search.phoneCode)
@@ -86,7 +88,7 @@ const ProcessingPay = () => {
         </p>
 
         <p className="text-[#FFFAF6] text-center font-[Inter-Regular] text-base text-opacity-80  ">
-          You are making payment for <br/> <span className="text-primary-500">{search?.filmtitle}</span>  <br/>
+          You are making payment for <br/> <span className="text-primary-500">{filmTitle}</span>  <br/>
           <span className="font-[Inter-Bold]">Price:</span> UGX {search?.price}
         </p>
 
