@@ -7,7 +7,7 @@
     "dev": "vite",
     "host": "vite --host",
     "generate-sitemap": "rimraf public/sitemap.xml && node seo_scripts/generate-sitemap.js && node seo_scripts/prerender.js",
-    "build": "rimraf dist && vite build && npm run generate-sitemap",
+    "build": "rimraf dist && vite build && yarn run generate-sitemap",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
