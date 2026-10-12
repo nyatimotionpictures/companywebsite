@@ -41,6 +41,8 @@ const DonationPay = () => {
       option: search.option,
       phoneCode: search.phoneCode,
       paymentNumber: search.paymentNumber,
+      // the app's "Donate anonymously" choice; the server then records no donor
+      anonymous: search.anonymous === "true",
     };
 
     usePayMutation.mutate(paymentRequestData, {

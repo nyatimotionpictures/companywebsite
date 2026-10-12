@@ -22,51 +22,24 @@ const PaymentValidation = () => {
   const [errorMessage, setErrorMessage] = useState("");
   // const [transaction, setTransaction] = useState(null);
 
-  const { data, status, error, refetch } = useQuery({
+  // check every 3s while pending (MoMo approvals take seconds); stop after
+  // 3 minutes, by which point MTN has timed the prompt out
+  const startedAt = React.useRef(Date.now());
+  const { data } = useQuery({
     queryKey: ["paymentStatus", params.orderTrackingId],
     queryFn: () => getPaymentStatus(params.orderTrackingId),
     enabled: !!params.orderTrackingId,
     refetchOnMount: false,
-    refetchOnWindowFocus: false,
-    // onSettled: (data, error) => {
-    //   if (error) {
-    //     setErrorMessage(error?.message);
-    //     return;
-    //   }
-
-    //   if (data?.status === "PENDING") {
-    //     console.log("data", data);
-    //     setTimeout(() => {
-    //       queryClient.refetchQueries("paymentStatus");
-    //     }, 10000);
-    //   }
-    // },
+    refetchOnWindowFocus: true,
+    refetchInterval: (query) => {
+      const current = query.state.data?.status;
+      const pending = !current || current === "PENDING";
+      return pending && Date.now() - startedAt.current < 3 * 60 * 1000
+        ? 3000
+        : false;
+    },
   });
 
-  React.useEffect(() => {
-  
-    let timedout = null;
-    if (status === "success") {
-      if (data?.status === "PENDING") {
-        timedout = setTimeout(() => {
-           // console.log(data?.status);
-            refetch();
-          // queryClient.invalidateQueries({
-          //   queryKey: ["donationStatus", params.orderTrackingId],
-          // });
-        //  queryClient.refetchQueries("donationStatus");
-        }, 20000);
-      } else {
-        clearTimeout(timedout);
-      }
-    }
-    
-
-    return () => {
-      console.log("unmount");
-     
-    };
-  }, [data, params.orderTrackingId, status]);
 
   return (
     <div className="bg-secondary-800 text-whites-50 min-h-[100vh] w-full flex flex-col items-center justify-center gap-[20px] relative">
@@ -92,6 +65,7 @@ const DisplayContainer = React.memo(({ status, transaction, errorMessage }) => {
           return <PaymentPending errorMessage={errorMessage} />;
         case "failed":
           return <PaymentFailed />;
+        case "timeout":
         case "timedout":
           return <PaymentTimedout />;
         default:
