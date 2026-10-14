@@ -8,7 +8,7 @@ const TeamData = [
     description: <p> Cindy Evelyn Magara (PhD) is a lecturer in literature and film at Makerere University in Uganda. She works as a director for Nyati Motion Pictures as well. She has written about African cinema in general and Ugandan film society in particular as an academic filmmaker. The following are some of her critical works: <i>Symbolism in Ugandan Cinema</i> (2014); <i>"Film Studies at Makerere University: The Birth of Uganda's Digital Film Industry"</i> (2024); <i>Contemporary East African Cinema: Emergent Themes and Aesthetics</i> (2020); <i>"Imaging the Self: The Representation of Women in Mariam Ndagire's Films" in Narrative, Agency and Subjectivity: Writing and Contemporary Eastern African Peripheral Subjectivities</i> (2019); <i>"The Concept of Heroism Among the Banyoro"</i> (2013); <i>"Developing Uganda's Film Industry Requires Concerted Effort"</i> (2016); <i>"Empowering Ugandans Through Film"</i> (2014). Her film oeuvre includes three feature titles and two documentary films: <i>Windows of Hope</i> (2011), <i>Fair Play</i> (2009) and <i>Fate</i> (2006), <i>A Book for Every Child</i> (2013), and <i>Tuko Pamoja</i> (2024), respectively. Dr. Magara wrote and directed Uganda's first independent film, <i>Fate</i> (2006), which debuted in theatres (at the time at Cineplex Cinema) and was the first Ugandan movie to air on Africa Magic, an African film channel on digital satellite television (DSTV). She has also participated in a number of festivals and competitions as a juror, most notably as the chief juror for the Pearl International Film Festivals in Uganda from 2008 to 2017 and as a juror member in 2024; she was a member of the Oscars selection committee for Uganda's Best Foreign Language/International Film category from 2019 to 2026; and she was a juror for the Uganda Film Festival in 2022 and 2023; she is Committee Member for the Uganda Communications Commission’s Film Festival Content Development Fund, 2026-27 and is Jury Member for the Mashariki Literary Rights Gala Awards, 2026. She is now working on a live-action series called "Conquer or Die," which is Uganda's version of "Game of Thrones" and tells the story of the precolonial rulers' interactions with British colonial aggressiveness in East Africa.
     </p>,
     bg: "bg-[#AB4157]",
-    phone: "+256 702 074337",
+    phone: "+256 702074337",
     Email: "cindy.magara@nyatimotionpictures.com | Cindy.Magara@mak.ac.ug "
   },
   {
@@ -18,7 +18,7 @@ const TeamData = [
     A Pearl of Africa Award-winning musician, songwriter, producer and performer. A former Member of the KADS Band with hit songs like “No Parking” and the ever-green ballad, “Garuka”. Akiiki was a Production Executive with 91.3 Capital FM in Kampala, producing shows like the <i>“Capital Gang”</i> and <i>“Desert Island Discs”</i>. Akiiki continues to produce sound for Television, Radio and film. Notable is the Tuko Pamoja Docuseries, for which he supported in composed and solely produced the soundtracks for all the documentary segments. He was the sound supervisor for the documentary. He recorded and produced the sound (narration and percussion).
     </p>,
     bg: "bg-[#F19E5B]",
-    phone: "+256 774 789164",
+    phone: "+256 774789164",
     Email: "akiiki.romeo@gmail.com"
   },
   {
@@ -30,21 +30,30 @@ const TeamData = [
     phone: "+256 784 873420 | +256 703 994605",
     Email: "rarrigz@gmail.com | atukundarogers@gmail.com"
   },
+  // {
+  //   title: "Justine Nantongo",
+  //   src: "",
+  //   description: <p>Details not yet provided</p>,
+  //   bg: "bg-[#ec7474]",
+  //   phone: "+256 751645984",
+  //   Email: "econijosh6862@gmail.com"
+  // },
   {
-    title: "Justine Nantongo",
-    src: "",
-    description: <p>Details not yet provided</p>,
-    bg: "bg-[#ec7474]",
-    phone: "+256751645984",
-    Email: "econijosh6862@gmail.com"
-  },
-    {
     title: "Israel Kaduhaga",
     src: "https://ik.imagekit.io/nyatimot/Pages/Teams/IMG-20240209-WA0024.png",
     description: <p>Israel Kaduhaga is a cinematographer, editor, scriptwriter, and photographer who began his career by participating in the Uganda Film Festival's Cine Arts Academy in 2022 where he earned a certificate in Film Editing and Directing. He has a Bachelor of Arts in Drama from Makerere University. From 2023 he studied while working as an apprentice at Nyati Motion Pictures, where he was able to apply what he had learned in school. During his internship, he worked as a script writer and editor for <i>Fused Dots</i>. He served as a production assistant on the 13-part, award-winning documentary <i>Tuko Pamoja</i> (2024). He has also worked as a creative team member with Ngazi Arts, which develops children's stories such as <i>Nsangi</i> and <i>Lion, and Hare</i>, as well as cast and crew on the drama production titled <i>The Legend of Kintu</i>. He takes pictures and videos at events like weddings, concerts, movie premieres, podcasts, graduations, and more because of his skill with the camera. He is currently employed with Nyati Motion Pictures as a social media handler and production assistant.</p>,
     bg: "bg-[#3598DD]",
-    phone: "+256 762 043966 | +256 726 816048",
+    phone: "+256 762043966 | +256 726816048",
     Email: "jairusIsrael224@gmail.com"
+  },
+  {
+    title: "Stephanie Kirathe",
+    src: "https://ik.imagekit.io/bambaholdings/profile/Steph_kirathe.png",
+    description: <p> <a href="https://www.linkedin.com/in/stephiwangari/" target="_blank">Stephanie Kirathe</a> is a product designer and UX consultant who leads the end-to-end design and architecture of digital products and enterprise ecosystems. As the Product Designer, she spearheaded the design of Nyatiflix, a multi-platform OTT TVoD streaming platform, a brand of Nyati Motion Pictures Ltd. Beyond Mediatech, Stephanie brings extensive experience leading commercial, national and institutional digital platforms, including: <br/><i>Smart Fisher Technologies</i>: Leading product conceptualization and technical planning for a national digital infrastructure PaaS to formalize and digitize Uganda's fisheries value chain in collaboration with NaFIRRI, NARO, URA and UBOS. <br/> <i>Digitized Research Management System</i> (DRIMS): Designing a centralized research management platform for the Uganda Management Institute (UMI) to digitize the end-to-end research lifecycle via role-based portals and user adoption programs.
+  </p>,
+    bg: "bg-[#ec7474]",
+    phone: "+254 114283856",
+    Email: "stephaniekirathe@gmail.com",
   },
 ];
 

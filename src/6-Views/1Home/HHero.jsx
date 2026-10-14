@@ -36,9 +36,15 @@ const HHero = ({ scrollFunc }) => {
           </div>
           {/** subtext & buttons */}
           <div className="box-border flex flex-col gap-[16px] items-center max-w-[441px] xl:gap-[40px]">
+            {/* <p className=" font-[Inter-Light] text-[13px] md:text-[14px] xl:text-base leading-[20px] text-center text-[#FFFFFE] select-none">
+              Stream Originals like <span onClick={() => navigate("https://stream.nyatimotionpictures.com/series/tuko-pamoja")} className="italic font-bold hover:text-[#E8CFD2] cursor-pointer">Tuko Pamoja</span> Docuseries (2024) , <span onClick={() => navigate("/film/6653809ab30afd15ac294f78")} className="italic font-bold hover:text-[#E8CFD2] cursor-pointer">Windows of Hope</span> (2011),
+              <span onClick={() => navigate("/film/66504774b30afd15ac294f77")} className="italic font-[700] hover:text-[#E8CFD2] cursor-pointer">&nbsp;Fair Play</span> (2010) and <span onClick={() => navigate("/film/665383c3b30afd15ac294f79")} className="italic font-bold hover:text-[#E8CFD2] cursor-pointer">Fate</span> (2006).
+            </p> */}
+
+            {/* For future updates for uploaded films,add the slugs with window.open("[slug]") */}
             <p className=" font-[Inter-Light] text-[13px] md:text-[14px] xl:text-base leading-[20px] text-center text-[#FFFFFE] select-none">
-              Stream Originals like <span onClick={() => navigate("/film/6653925ab30afd15ac294f7a")} className="italic font-bold hover:text-[#E8CFD2] cursor-pointer">Tuko Pamoja Docuseries</span> , <span onClick={() => navigate("/film/6653809ab30afd15ac294f78")} className="italic font-bold hover:text-[#E8CFD2] cursor-pointer">Windows of Hope</span>,
-              <span onClick={() => navigate("/film/66504774b30afd15ac294f77")} className="italic font-[700] hover:text-[#E8CFD2] cursor-pointer">&nbsp;Fair Play</span> and <span onClick={() => navigate("/film/665383c3b30afd15ac294f79")} className="italic font-bold hover:text-[#E8CFD2] cursor-pointer">Fate</span>
+              Stream Originals like <span onClick={() => window.open("https://stream.nyatimotionpictures.com/series/tuko-pamoja", "_blank", "noopener")} className="italic font-bold hover:text-[#E8CFD2] cursor-pointer">Tuko Pamoja</span> Docuseries (2024) , <span onClick={() => navigate("/film/6653809ab30afd15ac294f78")} className="italic font-bold hover:text-[#E8CFD2] cursor-pointer">Windows of Hope</span> (2011),
+              <span onClick={() => navigate("/film/66504774b30afd15ac294f77")} className="italic font-[700] hover:text-[#E8CFD2] cursor-pointer">&nbsp;Fair Play</span> (2010) and <span onClick={() => navigate("/film/665383c3b30afd15ac294f79")} className="italic font-bold hover:text-[#E8CFD2] cursor-pointer">Fate</span> (2006).
             </p>
 
             <div className="flex flex-row w-full flex-wrap items-center justify-center gap-[20px]">

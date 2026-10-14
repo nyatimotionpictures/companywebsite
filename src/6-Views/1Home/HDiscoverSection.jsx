@@ -24,9 +24,8 @@ const HDiscoverSection = ({ nRef }) => {
               <span className="text-[#EE5070]">Buffalo</span>) Motion Pictures (NMP) is a leading film and video production powerhouse in Uganda, East Africa, established in 2005.
             </p>
             <p>
-              NMP has produced several notable films: <span className="italic font-bold">Fate</span> (2006), <span className="italic font-bold">Fair Play</span>
-              (2010), and <span className="italic font-bold">Windows of Hope</span> (2011) in the feature film category,
-              and <span className="italic font-bold">A Book for Every Child</span> (2013) in the documentary category, and <span className="italic font-bold">Tuko Pamoja</span>(2024) a docuseries in the documentary category. 
+              NMP has produced several notable films: <span className="italic font-bold">Fate</span> (2006), <span className="italic font-bold">Fair Play</span> (2010), and <span className="italic font-bold">Windows of Hope</span> (2011) in the feature film category,
+              and <span className="italic font-bold">A Book for Every Child</span> (2013) in the documentary category, and <span className="italic font-bold">Tuko Pamoja</span> (2024) a docuseries in the documentary category. 
               Tuko Pamoja is a 13-part historical series exploring Uganda’s precolonial heroes and heroines and centering what the contemporary Ugandan (African) can learn from history.
             </p>
           </div>
